@@ -55,7 +55,7 @@ product_grid.addEventListener("click",function(event){
         console.log(ProductID)
         AddProducttoCart(ProductID)
     }
-})
+});
 
 function AddProducttoCart(ProductID){
     const Product = AllProducts.find(p => p.id == ProductID)
