@@ -147,7 +147,7 @@ cart_total_Layout.addEventListener("click",function(event){
             CartArr = []
             localStorage.removeItem("userCart")
             UpdateCartDisplay()
-            window.location.href = 'checkOut.html'
+            window.location.href = 'CheckOut.html'
         }
         else{
             window.location.href = 'Freecheckout.html'
