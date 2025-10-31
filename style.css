@@ -1,15 +1,10 @@
-/* =================================================== */
-/* --- Final CSS with Animations & Interactions --- */
-/* =================================================== */
 
-/* 1. Naya Font Import Karein */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
 
-/* 2. Global Styles & Variables (Dark Theme) */
 :root {
-    /* Dark Theme Colors */
+
     --primary-color: #38bdf8;
-    --primary-glow: #38bdf84d; /* For glowing shadow effect */
+    --primary-glow: #38bdf84d; 
     --background-color: #0d1117;
     --surface-color: #161b22;
     --heading-color: #f0f6fc;
@@ -26,13 +21,12 @@
 }
 
 body {
-    font-family: 'Inter', sans-serif; /* Naya Font */
+    font-family: 'Inter', sans-serif; 
     background-color: var(--background-color);
     color: var(--text-color);
     line-height: 1.6;
 }
 
-/* 3. Keyframes for Animation */
 @keyframes fadeInUp {
     from {
         opacity: 0;
@@ -44,7 +38,6 @@ body {
     }
 }
 
-/* 4. Header aur Layout */
 header {
     background-color: var(--surface-color);
     padding: 1.5rem 0;
@@ -78,7 +71,6 @@ h2 {
     margin-bottom: 1.5rem;
 }
 
-/* 5. Product Grid & Cards (Animations ke saath) */
 #product-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
@@ -97,19 +89,18 @@ h2 {
     padding: 1.5rem;
     text-align: center;
     
-    /* Animation apply karna */
-    opacity: 0; /* Initially hidden */
+    
+    opacity: 0; 
     animation: fadeInUp 0.5s ease-out forwards;
 }
 
-/* Staggered Animation Delays (ek-ek karke aane ka effect) */
 .product-card:nth-child(1) { animation-delay: 0.1s; }
 .product-card:nth-child(2) { animation-delay: 0.2s; }
 .product-card:nth-child(3) { animation-delay: 0.3s; }
 .product-card:nth-child(4) { animation-delay: 0.4s; }
 .product-card:nth-child(5) { animation-delay: 0.5s; }
 .product-card:nth-child(6) { animation-delay: 0.6s; }
-/* ...and so on for more cards */
+
 
 .product-card:hover {
     transform: translateY(-8px);
@@ -159,18 +150,15 @@ h2 {
 
 .add-to-cart-btn:hover {
     filter: brightness(1.2);
-    /* Glowing shadow effect on hover */
     box-shadow: 0 0 15px var(--primary-glow), 0 0 20px var(--primary-glow);
 }
 
 .add-to-cart-btn:active {
-    /* Click karne par dabne ka effect */
     transform: scale(0.98);
     filter: brightness(1);
 }
 
 
-/* 6. Cart Section & Other Styles (No major changes needed here) */
 #cart-section {
     background-color: var(--surface-color);
     padding: 1.5rem;
@@ -188,7 +176,6 @@ h2 {
     margin-right: -8px;
 }
 
-/* Baaki saare cart styles same rahenge */
 .cart-empty-msg { text-align: center; padding: 2rem 0; }
 .cart-item { display: flex; align-items: center; margin-bottom: 1rem; padding-bottom: 1rem; border-bottom: 1px solid var(--border-color); }
 .cart-item:last-child { border-bottom: none; }
@@ -203,7 +190,7 @@ h2 {
 .quantity-btn:hover { background-color: var(--primary-color); color: #fff; border-color: var(--primary-color); }
 .item-quantity { font-weight: 600; font-size: 1rem; color: var(--heading-color); }
 #cart-total { margin-top: 1rem; border-top: 2px solid var(--border-color); padding-top: 1rem; }
-#cart-total h3 { display: flex; justify-content: space-between; font-size: 1.2rem; color: var(--heading-color); }
+#cart-total h3 { display: flex; justify-content: start; font-size: 1.2rem; color: var(--heading-color); }
 #checkout-btn { width: 100%; margin-top: 1rem; background-color: var(--success-color); color: #fff; border: none; padding: 0.8rem 1.5rem; border-radius: 8px; cursor: pointer; font-size: 1.1rem; font-weight: 600; transition: background-color 0.2s; }
 #checkout-btn:hover { background-color: var(--success-hover); }
 #cart-items::-webkit-scrollbar { width: 8px; }
